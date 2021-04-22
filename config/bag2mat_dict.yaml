@@ -12,6 +12,15 @@ geometry_msgs/TwistStamped:
  angular_velocity_y: m.twist.angular.y
  angular_velocity_z: m.twist.angular.z
 
+geometry_msgs/Twist:
+ msg_time: t.to_sec()
+ velocity_x: m.linear.x
+ velocity_y: m.linear.y
+ velocity_z: m.linear.z
+ angular_velocity_x: m.angular.x
+ angular_velocity_y: m.angular.y
+ angular_velocity_z: m.angular.z
+
 geometry_msgs/PoseStamped:
  msg_time: t.to_sec()
  header_timestamp: m.header.stamp.to_sec()
@@ -144,6 +153,11 @@ std_msgs/UInt8:
  msg_time: t.to_sec()
  data: m.data
 
+std_msgs/UInt32:
+ data: m.data
+ msg_time: t.to_sec()
+ 
+
 std_msgs/String:
  msg_time: t.to_sec()
  data: m.data
@@ -181,3 +195,36 @@ seabed_drivers/ThrusterData: # t.to_sec(), m.prop_rpm, m.omega, m.voltage, m.cur
  voltage: m.voltage
  current: m.current
  temperature: m.temperature
+
+bebop_simulator/Sphinx_msgs:
+ msg_time: t.to_sec()
+ velXABC: m.velXABC                       # Velocity along the x-axis in the aircraft body center reference system
+ velYABC: m.velYABC                      # Velocity along the y-axis in the aircraft body center reference system
+ velZABC: m.velZABC                      # Velocity along the z-axis in the aircraft body center reference system
+ angVelXABC: m.angVelXABC                   # Angular velocity along the x-axis in the aircraft body center reference system
+ angVelYABC: m.angVelYABC                   # Angular velocity along the y-axis in the aircraft body center reference system
+ angVelZABC: m.angVelZABC                   # Angular velocity along the z-axis in the aircraft body center reference system
+ velXENU: m.velXENU                      # Velocity along the x-axis in the inertial reference system
+ velYENU: m.velYENU                      # Velocity along the y-axis in the inertial reference system
+ velZENU: m.velZENU                      # Velocity along the z-axis in the inertial reference system
+ posX: m.posX                         # Drone position along the x-axis
+ posY: m.posY                         # Drone position along the y-axis
+ posZ: m.posZ                         # Drone position along the z-axis
+ attitudeX: m.attitudeX                    # Drone attitude along the x-axis (roll angle)
+ attitudeY: m.attitudeY                    # Drone attitude along the y-axis (pitch angle)
+ attitudeZ: m.attitudeZ                    # Drone attitude along the z-axis (yaw angle)
+ accXABC: m.accXABC                      # Acceleration along the x-axis in the aircraft body center reference system
+ accYABC: m.accYABC                      # Acceleration along the y-axis in the aircraft body center reference system
+ accZABC: m.accZABC                      # Acceleration along the z-axis in the aircraft body center reference system
+ angAccXABC: m.angAccXABC                   # Angular acceleration along the x-axis in the aircraft body center reference system
+ angAccYABC: m.angAccYABC                   # Angular acceleration along the y-axis in the aircraft body center reference system
+ angAccZABC: m.angAccZABC                   # Angular acceleration along the z-axis in the aircraft body center reference system
+
+bebop_msgs/Ardrone3PilotingStateAltitudeChanged:
+ msg_time: m.header.stamp.to_sec()
+ altitude: m.altitude
+
+bebop_msgs/Ardrone3CameraStatedefaultCameraOrientation:
+ msg_time: m.header.stamp.to_sec()
+ tilt: m.tilt
+ pan: m.pan

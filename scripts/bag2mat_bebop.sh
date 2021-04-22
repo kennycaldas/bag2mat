@@ -1,0 +1,1 @@
+./bag2matpy -c /home/kenny/catkin_ws/src/bag2mat/config/bebop_sphinx_config.yaml -d /home/kenny/catkin_ws/src/bag2mat/config/bag2mat_dict.yaml -i /media/kenny/01D5A56B27888600/datasets/sphinx_simple_test.bag

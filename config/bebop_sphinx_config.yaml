@@ -1,0 +1,11 @@
+#namespace: seabed
+topic_list: #- [topic_name, message_type(as per dictionary), variable_name in mat file
+ - [/bebop/fix, sensor_msgs/NavSatFix, bebop_gps]
+ - [/bebop/odom, nav_msgs/Odometry, bebop_odom] 
+ - [/orb_slam2_mono/pose, geometry_msgs/PoseStamped, orbslam_pose]
+ - [/orb_slam2_mono/kfs_number, std_msgs/UInt32, orbslam_kfs]
+ - [/bebop/states/ardrone3/PilotingState/AltitudeChanged, bebop_msgs/Ardrone3PilotingStateAltitudeChanged, bebop_altitude]
+ - [/bebop/parrotSphinx, bebop_simulator/Sphinx_msgs, bebop_groundtruth]
+ - [/bebop/states/ardrone3/CameraState/Orientation, bebop_msgs/Ardrone3CameraStatedefaultCameraOrientation, camera_orientation]
+ - [/bebop/cmd_vel, geometry_msgs/Twist, cmd_vel] 
+
